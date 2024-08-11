@@ -1,0 +1,231 @@
+body {
+    font-family: Arial, sans-serif;
+    background-image: url('_be45fafb-c3dc-484d-a115-7d86453ca908.jpg'); /* Path ke gambar */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    position: relative;
+}
+
+body::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.6); /* Overlay */
+    z-index: -1;
+}
+
+h2 {
+    color: #ff69b4; /* Warna pink cerah */
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.container {
+    background-color: #fffaf0; /* Warna putih krem */
+    padding: 30px;
+    border-radius: 15px; /* Lebih bulat untuk kesan lucu */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    width: 100%;
+    border: 2px solid #ffb6c1; /* Warna pink lembut */
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #db7093; /* Warna lavender */
+}
+
+input[type="number"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ffb6c1; /* Warna pink lembut */
+    border-radius: 10px;
+    box-sizing: border-box;
+    background-color: #ffe4e1; /* Latar belakang peach lembut */
+    color: #555;
+}
+
+.button-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+button {
+    width: 48%;
+    padding: 12px;
+    background-color: #ff69b4; /* Pink cerah */
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #ff85c1; /* Warna pink lebih terang saat dihover */
+        transform: scale(1.03); /* Membesarkan tombol sedikit */
+        transition: transform 0.3s ease;
+}
+
+h3 {
+    text-align: center;
+    color: #db7093; /* Lavender */
+    margin-top: 20px;
+    min-height: 30px; /* Tinggi tetap untuk menjaga posisi container */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#monthlyAnnuity {
+    font-weight: bold;
+    color: #ff69b4; /* Pink cerah */
+    display: inline-block;
+    min-width: 100px; /* Tetapkan lebar minimum */
+    text-align: right;
+}
+
+/* Gaya untuk tombol dark mode */
+#toggleTheme {
+    position: absolute;
+    top: 20px;
+    right: 25px;
+    background-color: #db7093; /* Warna lavender */
+    color: #fff;
+    border: none;
+    border-radius: 50%; /* Membuat tombol bulat */
+    width: 40px; /* Lebar dan tinggi sama untuk bulatan */
+    height: 40px;
+    cursor: pointer;
+    font-size: 18px; /* Ukuran ikon */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.3s;
+}
+
+#toggleTheme:hover {
+    background-color: #ff85c1; /* Warna pink lebih terang saat dihover */
+}
+
+/* Dark Mode Styles */
+body.dark-mode::before {
+    background-color: rgba(0, 0, 0, 0.7); /* Overlay yang lebih gelap untuk meningkatkan kontras */
+}
+
+body.dark-mode {
+    background-color: #2C2C2C; /* Warna abu-abu tua untuk latar belakang */
+    color: #F5F5F5; /* Warna teks terang yang lembut */
+}
+
+body.dark-mode .container, body.dark-mode .formula-container {
+    background-color: #3B3B3B; /* Warna abu-abu lebih terang untuk container */
+    border-color: #5A5A5A; /* Warna border yang lebih gelap untuk kontras */
+}
+
+body.dark-mode input[type="number"] {
+    background-color: #494949; /* Latar belakang input abu-abu gelap */
+    color: #EAEAEA; /* Warna teks terang pada input */
+    border-color: #5A5A5A; /* Border yang lebih gelap */
+}
+
+body.dark-mode button {
+    background-color: #FF85C1; /* Pink terang yang tetap lembut di atas latar belakang gelap */
+    color: #2C2C2C; /* Warna teks gelap pada tombol untuk kontras */
+}
+
+body.dark-mode button:hover {
+    background-color: #FF99C9; /* Warna pink lebih terang saat dihover */
+}
+
+body.dark-mode h2, body.dark-mode h3 {
+    color: #F5F5F5; /* Warna teks utama yang lembut namun tetap terlihat jelas */
+}
+
+body.dark-mode .formula-image {
+    border-color: #5A5A5A; /* Border gambar lebih gelap untuk menonjol di latar belakang */
+}
+
+/* Mengatur tata letak dua container */
+.main-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 20px; /* Jarak antara container */
+    padding: 20px;
+}
+
+.container, .formula-container {
+    background-color: #fffaf0; /* Warna putih krem */
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    width: 100%;
+    border: 2px solid #ffb6c1; /* Warna pink lembut */
+    min-height: 300px; /* Menetapkan tinggi minimum agar tidak berubah drastis */
+    box-sizing: border-box; /* Memastikan padding tidak mengubah ukuran */
+}
+
+/* Gaya khusus untuk container rumus */
+.formula-container h2 {
+    color: #ff69b4; /* Warna pink cerah */
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.formula-container p {
+    color: #db7093; /* Warna lavender */
+    margin-bottom: 10px;
+}
+
+.formula-container ul {
+    color: #db7093; /* Warna lavender */
+    padding-left: 20px;
+}
+
+.formula-image {
+    width: 75%; /* Atur ukuran gambar sesuai kebutuhan */
+    height: auto;
+    margin: 0 auto 20px auto; /* Jarak margin bawah dan tengah */
+    border-radius: 10px;
+    border: 1px solid #ffb6c1; /* Border pink lembut */
+    display: block; /* Pastikan gambar sebagai elemen block */
+    box-shadow: 0 4px 15px rgba(255, 105, 180, 0.5); /* Bayangan pink */
+}
+
+
+/* Gaya untuk Progress Bar */
+
+.progress-container {
+    position: relative;
+    width: 100%;
+    max-width: 600px;
+    background-color: #f3f3f3;
+    border-radius: 10px;
+    overflow: hidden;
+    height: 5px; /* Tinggi progress bar */
+    margin: 20px auto;
+    display: none; /* Sembunyikan progress bar secara default */
+}
+
+.progress-bar {
+    height: 100%;
+    width: 0%; /* Dimulai dari 0% */
+    background-color: #ff69b4; /* Warna progress bar */
+    transition: width 0.4s ease-in-out; /* Animasi perubahan lebar */
+}
